@@ -1,4 +1,5 @@
-import { about } from "@/data/content";
+import Image from "next/image";
+import { about, profile } from "@/data/content";
 import Reveal from "./Reveal";
 
 export default function About() {
@@ -24,24 +25,14 @@ export default function About() {
               ))}
             </div>
           </div>
-          <div className="flex aspect-[1/1.1] max-w-55 items-center justify-center overflow-hidden rounded-md border border-line bg-bg-raised md:max-w-none">
-            <div className="p-5 text-center font-mono text-[12.5px] text-slate">
-              <svg
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={1.4}
-                className="mx-auto mb-2.5 opacity-50"
-              >
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7" />
-              </svg>
-              Profile photo
-              <br />
-              placeholder
-            </div>
+          <div className="relative aspect-[1/1.1] max-w-55 overflow-hidden rounded-md border border-line bg-bg-raised md:max-w-none">
+            <Image
+              src="/profile.jpg"
+              alt={profile.name}
+              fill
+              sizes="(max-width: 768px) 220px, 280px"
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
