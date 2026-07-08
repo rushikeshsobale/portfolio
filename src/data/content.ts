@@ -134,6 +134,7 @@ export type Project = {
   features: string[];
   tags: string[];
   links: ProjectLink[];
+  images?: string[];
 };
 
 export const projects: Project[] = [
@@ -155,6 +156,11 @@ export const projects: Project[] = [
     links: [
       { label: "Source", href: "https://github.com/rushikeshsobale/chatApp-new", type: "github" },
       { label: "Live", href: "https://hibuddy-opal.vercel.app", type: "live" },
+    ],
+    images: [
+      "/projects/hibuddy-login.png",
+      "/projects/hibuddy-profile.png",
+      "/projects/hibuddy-feed.png",
     ],
   },
   {

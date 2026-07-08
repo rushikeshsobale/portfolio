@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/data/content";
 import { ExternalLinkIcon, GithubIcon } from "./icons";
 
@@ -56,9 +57,25 @@ export default function ProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      <div className="flex aspect-[16/8] items-center justify-center border-t border-line bg-bg-raised font-mono text-[12.5px] text-slate">
-        project screenshot — swap me
-      </div>
+      {project.images && project.images.length > 0 ? (
+        <div className="flex aspect-[16/8] gap-px overflow-hidden border-t border-line bg-line">
+          {project.images.map((src) => (
+            <div key={src} className="relative min-w-0 flex-1 bg-bg-raised">
+              <Image
+                src={src}
+                alt={`${project.title} screenshot`}
+                fill
+                sizes="(max-width: 640px) 100vw, 800px"
+                className="object-cover object-top"
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex aspect-[16/8] items-center justify-center border-t border-line bg-bg-raised font-mono text-[12.5px] text-slate">
+          project screenshot — swap me
+        </div>
+      )}
     </div>
   );
 }
