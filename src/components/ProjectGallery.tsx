@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ChevronLeftIcon, ChevronRightIcon } from "./icons";
 
@@ -28,7 +28,7 @@ export default function ProjectGallery({
 
   return (
     <div
-      className="group relative aspect-[16/8] overflow-hidden border-t border-line bg-bg-raised"
+      className="group relative h-[420px] overflow-hidden border-t border-line bg-bg-raised"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -39,7 +39,7 @@ export default function ProjectGallery({
           alt={`${title} screenshot ${i + 1}`}
           fill
           sizes="(max-width: 640px) 100vw, 800px"
-          className={`object-cover object-top transition-opacity duration-500 ${
+          className={`object-contain p-4 transition-opacity duration-500 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
           priority={i === 0}
