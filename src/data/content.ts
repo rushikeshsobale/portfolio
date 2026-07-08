@@ -193,6 +193,7 @@ export const projects: Project[] = [
     ],
     tags: ["React.js", "TypeScript", "Vite", "Expo / React Native", "WebSockets", "IoT / ZMPT101B"],
     links: [],
+    images: ["/projects/irrigation-dashboard.png", "/projects/irrigation-timer.png"],
   },
   {
     title: "EVM UI Simulator",
@@ -208,5 +209,6 @@ export const projects: Project[] = [
     ],
     tags: ["React.js", "UI Simulation", "Freelance"],
     links: [],
+    images: ["/projects/evm-ballot.png", "/projects/evm-vvpat.png"],
   },
 ];
