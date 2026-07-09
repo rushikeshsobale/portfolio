@@ -49,6 +49,13 @@ export default function Hero() {
         >
           Get in touch
         </a>
+        <a
+          href="/resume.pdf"
+          download
+          className="inline-flex items-center gap-2 rounded border border-line px-6 py-3.25 text-[14.5px] font-medium text-ink transition-all hover:-translate-y-px hover:border-ink"
+        >
+          Download resume ↓
+        </a>
       </div>
     </section>
   );
