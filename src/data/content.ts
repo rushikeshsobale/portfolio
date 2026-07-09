@@ -164,21 +164,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    title: "FarmersBay",
-    tagline: "Marketplace platform connecting farmers directly with buyers",
-    status: "in development",
-    description:
-      "A Next.js web platform giving farmers a direct digital storefront — profile pages and produce listings — backed by Supabase for auth and data, so farmers can reach buyers without a middleman.",
-    features: [
-      "Farmer profile & storefront pages",
-      "Supabase-backed auth and data layer",
-      "Server-rendered Next.js App Router pages",
-      "Tailwind CSS v4 responsive UI",
-    ],
-    tags: ["Next.js", "React 19", "Supabase", "Tailwind CSS", "TypeScript"],
-    links: [],
-  },
-  {
     title: "Smart Irrigation Controller",
     tagline: "IoT automation system for remote pump monitoring & control — web dashboard + mobile app",
     status: "deployed",
